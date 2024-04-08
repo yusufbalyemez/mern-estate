@@ -8,6 +8,16 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
+# KURULUM
+npm create vite@latest
+npm install
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+Vite react yazarak geri kalanı dökümandan ayarla.
+npm react-router-dom
+
+
 # UYGULAMA İÇİ NOTLAR
 -App.css dosyasını sildi. Tailwind kullandığı için gerek yokmuş.
 
