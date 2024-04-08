@@ -1,0 +1,5 @@
+
+/* Normalde başlangıçta App.css dosyası da vardı. Tailwind kullandığı için ona gerek yok dedi sildi. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
