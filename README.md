@@ -17,6 +17,8 @@ npx tailwindcss init -p
 Vite react yazarak geri kalanı dökümandan ayarla.
 npm react-router-dom
 
+npm i react-icons
+
 
 # UYGULAMA İÇİ NOTLAR
 -App.css dosyasını sildi. Tailwind kullandığı için gerek yokmuş.
