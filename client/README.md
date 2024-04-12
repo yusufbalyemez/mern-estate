@@ -18,6 +18,8 @@ Vite react yazarak geri kalanı dökümandan ayarla.
 npm react-router-dom
 
 npm i react-icons
+npm install @reduxjs/toolkit react-redux
+npm i redux-persist
 
 
 # UYGULAMA İÇİ NOTLAR
