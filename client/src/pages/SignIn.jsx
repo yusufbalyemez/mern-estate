@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  signInStart,
+  signInSucces,
+  signInFailure,
+} from "../redux/user/userSlice.js";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const {loading,error} = useSelector((state)=>state.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch(); //redux toolkit fonksiyonlarından biri.
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,7 +22,7 @@ export default function SignUp() {
     e.preventDefault();
 
     try {
-      setLoading(true);
+      dispatch(signInStart());
       const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers: {
@@ -27,18 +33,14 @@ export default function SignUp() {
       const data = await res.json();
       console.log(data);
       if (data.succes === false) {
-        setLoading(false);
-        setError(data.message);
+        dispatch(signInFailure(data.message));
         return;
-      } else {
-        setError(null);
-        navigate("/");
       }
+      dispatch(signInSucces(data));
+      navigate("/");
     } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+      dispatch(signInFailure(err.message))
+    } 
   };
 
   return (
