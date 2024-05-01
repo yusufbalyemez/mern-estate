@@ -1,2 +1,2 @@
 # Kurulan kütüphaneler
-npm i cookie-parser
+npm i cookie-parser firebase
