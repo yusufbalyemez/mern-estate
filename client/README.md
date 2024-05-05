@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-# KURULUM
+# KURULUMLAR
 npm create vite@latest
 npm install
 npm install -D tailwindcss postcss autoprefixer
@@ -18,8 +18,12 @@ Vite react yazarak geri kalanı dökümandan ayarla.
 npm react-router-dom
 
 npm i react-icons
+# global state ve hooklar oluşturmak için
 npm install @reduxjs/toolkit react-redux
 npm i redux-persist
+# slider için
+npm i swiper 
+
 
 
 # UYGULAMA İÇİ NOTLAR
