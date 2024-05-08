@@ -24,6 +24,9 @@ npm i redux-persist
 # slider için
 npm i swiper 
 
+# birden fazla olan satırlarda cümleyi 3 nokta ile kesme
+npm install -D @tailwindcss/line-clamp
+
 
 
 # UYGULAMA İÇİ NOTLAR
